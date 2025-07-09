@@ -39,8 +39,8 @@ function addProductFunc() {
         <img src="${productImg.value}" alt="${Pname}">
     </div>
     <div class="product-details">
-        <h4>${Pname}</h4>
-        <p>${productDescription.value}</p>
+        <h4 ondblclick="editIt(this);">${Pname}</h4>
+        <p ondblclick="editIt(this);">${productDescription.value}</p>
     </div>
     `;
 
@@ -85,3 +85,23 @@ requiredInputs.forEach(e => {
         addProduct.removeAttribute("disabled");
     });
 });
+
+// Edit It Function => when double clicking make text editable
+let currentText = "";
+let doubleClickFunc = "editIt(this);";
+let editIt = e => {
+    e.removeAttribute("ondblclick");
+    currentText = e.innerHTML;
+    e.innerHTML = `<input type="text" class="edit-it" value="${e.textContent}">`;
+    
+    let editIt = document.querySelector(".edit-it");
+    editIt.focus();
+    editIt.onblur = function () {
+        let textToAdd = currentText;
+        if (this.value.trim() != "") {
+            textToAdd = this.value;
+        }
+        e.innerHTML = textToAdd;
+        e.setAttribute("ondblclick", doubleClickFunc);
+    }
+}
