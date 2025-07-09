@@ -1,0 +1,71 @@
+<!-- 
+    # Coded With 🧡 By Youssef Almodhesh ^_^
+-->
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+
+    <!-- SEO -->
+    <meta name="description" content="...">
+    <meta name="keywords" content="...">
+    <meta property="og:title" content="Add Product">
+    <meta property="og:description" content="Add Product">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Add Product">
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:image" content="./assets/img/og.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    
+    <button type="button" id="showNewProductModal"><i class="bi bi-plus-lg"></i></button>
+
+    <div class="overlay d-none">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>إضافة منتج جديد</h3>
+                <button type="button" id="closeModal"><i class="bi bi-x-circle-fill"></i></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="required-input" id="productName" placeholder="إسم المنتج">
+                <span class="error-msg">يجب أن لا يكون إسم المنتج فارغ</span>
+                <textarea class="required-input" id="productDescription" placeholder="وصف المنتج"></textarea>
+                <span class="error-msg">يجب أن لا يكون وصف المنتج فارغ</span>
+                <input type="url" class="required-input" id="productImg" placeholder="Product Image">
+                <span class="error-msg">يجب أن لا تكون صورة المنتج فارغة</span>
+                <button type="button" id="addProduct" disabled>إضافة المنتج</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="alert">لا يوجد منتجات حتى اللحظة. <a href="#" onclick="openOverlay();">أضافة منتج جديد</a></div>
+        <div class="products">
+            <!-- <div class="product">
+                <button type="button" class="delete"><i class="bi bi-trash3"></i></button>
+                <div class="product-image">
+                    <img src="./assets/img/portfolio-4.webp" alt="Product Name">
+                </div>
+                <div class="product-details">
+                    <h4>إسم المنتج</h4>
+                    <p>وصف المنتج</p>
+                </div>
+            </div> -->
+        </div>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

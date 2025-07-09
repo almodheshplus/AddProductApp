@@ -1,0 +1,214 @@
+/* 
+    # Coded With 🧡 By Youssef Almodhesh ^_^
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in;
+}
+
+body {
+    font-family: "Noto Kufi Arabic", sans-serif;
+    direction: rtl;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.d-none {
+    display: none!important;
+}
+
+.error {
+    border: 2px solid #D32F2F!important;
+}
+.error-msg {
+    display: none;
+    color: #D32F2F;
+}
+.error + span.error-msg {
+    display: block;
+}
+
+.container {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.alert {
+    background-color: #00BCD4;
+    color: #fff;
+    padding: 17px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: center;
+}
+.alert a {
+    color: #fff;
+}
+
+.overlay {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.411);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+.modal {
+    background-color: #fff;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    height: min-content;
+}
+.modal .modal-header {
+    border-bottom: 1px solid #00000065;
+    padding-bottom: 10px;
+}
+.modal .modal-header h3 {
+    display: inline;
+}
+.modal .modal-header #closeModal {
+    float: left;
+    font-size: 30px;
+    color: #E53935;
+    background-color: transparent;
+}
+.modal .modal-header #closeModal:hover {
+    color: #D32F2F;
+}
+.modal .modal-body input, .modal .modal-body textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    font-family: inherit;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 1px solid #0000005e;
+    outline: 0;
+}
+.modal .modal-body input#productImg {
+    direction: ltr;
+}
+.modal .modal-body #addProduct {
+    background-color: #00897B;
+    color: #fff;
+    font-size: 18px;
+    font-family: inherit;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.modal .modal-body #addProduct:hover {
+    background-color: #00796B;
+}
+.modal .modal-body #addProduct:disabled {
+    background-color: #00796b6c;
+}
+
+#showNewProductModal {
+    position: fixed;
+    bottom: 20%;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background-color: #0288D1;
+    color: #fff;
+    z-index: 2;
+}
+#showNewProductModal:hover {
+    background-color: #0277BD;
+}
+
+.products {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.products .product {
+    position: relative;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.products .product .delete {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #E53935;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    top: -15px;
+    right: -15px;
+    z-index: 2;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.products .product .delete:hover {
+    background-color: #D32F2F;
+}
+.products .product .product-image {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    height: min-content;
+    overflow: hidden;
+}
+.products .product img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    display: block;
+}
+.products .product:hover img {
+    transform: scale(1.25) rotate(10deg);
+    filter: brightness(80%);
+}
+.products .product .product-details {
+    padding: 10px;
+}
+.products .product .product-details h4 {
+    font-size: 17px;
+}
+.products .product .product-details p {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+    }
+} */
