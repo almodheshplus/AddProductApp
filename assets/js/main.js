@@ -36,7 +36,7 @@ function addProductFunc() {
     e.innerHTML = `
     <button type="button" class="delete" onclick="delProduct(this);"><i class="bi bi-trash3"></i></button>
     <div class="product-image">
-        <img src="${productImg.value}" alt="${Pname}">
+        <img src="${productImg.value}" alt="${Pname}" onerror="this.src='./assets/img/error.png';">
     </div>
     <div class="product-details">
         <h4 ondblclick="editIt(this);">${Pname}</h4>
